@@ -1,0 +1,420 @@
+:root {
+    --main-color: #0d6e2e;
+    --accent-color: #fff;
+    --dark-bg: #0f1a2a;
+    --card-bg: #1a2a3f;
+    --text-light: #f5f5f5;
+    --text-muted: #a0aec0;
+    --error-color: #e53e3e;
+    --success-color: #38a169;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--dark-bg);
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(29, 78, 137, 0.15) 0%, transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(13, 110, 46, 0.1) 0%, transparent 25%);
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: rgba(15, 26, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Main Content */
+  .main-container {
+    padding: 40px 20px;
+  }
+  
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  
+  /* Benefits Section */
+  .benefits-section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+  }
+  
+  .benefits-section h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .benefits-list {
+    list-style: none;
+    margin-bottom: 30px;
+  }
+  
+  .benefits-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .benefits-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .benefits-list i {
+    color: var(--success-color);
+    font-size: 18px;
+  }
+  
+  .security-badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(13, 110, 46, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+  
+  .security-badge i {
+    font-size: 32px;
+    color: var(--accent-color);
+  }
+  
+  .security-badge h4 {
+    margin-bottom: 5px;
+  }
+  
+  .payment-methods p {
+    margin-bottom: 10px;
+    color: var(--text-muted);
+  }
+  
+  .payment-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 28px;
+  }
+  
+  .payment-icons i {
+    color: var(--text-light);
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+  
+  .payment-icons i:hover {
+    opacity: 1;
+  }
+  
+  /* Login Card */
+  .login-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+    height: fit-content;
+  }
+  
+  .login-card h1 {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px;
+  }
+  
+  .subtitle {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+  
+  .input-box {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-light);
+    transition: all 0.3s;
+  }
+  
+  .input-box:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 3px rgba(13, 110, 46, 0.3);
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 15px;
+    top: 43px;
+    color: var(--text-muted);
+    font-size: 18px;
+  }
+  
+  .password-strength {
+    margin-top: 8px;
+  }
+  
+  .strength-bar {
+    height: 5px;
+    border-radius: 3px;
+    background: #e53e3e;
+    width: 0%;
+    transition: all 0.3s;
+  }
+  
+  .strength-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .checkbox-group label {
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+  
+  .checkbox-group a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  .checkbox-group a:hover {
+    text-decoration: underline;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    background: linear-gradient(45deg, var(--main-color), #0daa4e);
+    color: white;
+    border: none;
+    padding: 16px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(13, 110, 46, 0.4);
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: var(--text-muted);
+  }
+  
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .divider:not(:empty)::before {
+    margin-right: 1em;
+  }
+  
+  .divider:not(:empty)::after {
+    margin-left: 1em;
+  }
+  
+  .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s;
+  }
+  
+  .google-btn:hover {
+    background: rgb(22, 158, 22);
+    transform: translateY(-2px);
+  }
+  
+  .google-image {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .signup-text {
+    margin-top: 25px;
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+  
+  .signup-text a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .signup-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Trust Indicators */
+  .trust-indicators {
+    background: var(--card-bg);
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .trust-indicators .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .trust-item i {
+    color: var(--accent-color);
+    font-size: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  
+  .footer a {
+    color: var(--text-light);
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+  }
+  
+  .footer p:first-child {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 968px) {
+    .content-wrapper {
+      grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .login-card {
+      padding: 25px;
+    }
+    
+    .benefits-section {
+      padding: 20px;
+    }
+    
+    .trust-indicators .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  }

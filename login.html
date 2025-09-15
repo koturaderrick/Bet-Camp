@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BetCamp - Sign Up</title>
+  <link rel="stylesheet" href="design\loginstyles.css">
+</head>
+<body>
+  <div class="wholePage">
+    <!-- Header with navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">BetCamp</div>
+        </nav>
+      </div>
+    </header>
+    <div class="container main-container">
+      <div class="content-wrapper">
+        <!-- Signup form -->
+        <div class="login-card">
+          <h1><i class="fas fa-user-plus"></i> Create Your Account</h1>
+          <p class="subtitle">Join thousands of winners at BetCamp</p>
+
+          <form id="signupForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input id="name" autocomplete="name" class="input-box" type="text" placeholder="Enter your name" required>
+              <i class="fas fa-user input-icon"></i>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input id="email" autocomplete="email" class="input-box" type="email" placeholder="Enter your email" required>
+              <i class="fas fa-envelope input-icon"></i>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input id="phone" autocomplete="tel" class="input-box" type="tel" placeholder="Enter phone number" required>
+              <i class="fas fa-phone input-icon"></i>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input id="password" autocomplete="new-password" class="input-box" type="password" placeholder="Enter password" required>
+              <i class="fas fa-lock input-icon"></i>
+              <div class="password-strength">
+                <div class="strength-bar"></div>
+                <span class="strength-text">Password strength</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="confirm">Confirm Password</label>
+              <input id="confirm" autocomplete="new-password" class="input-box" type="password" placeholder="Confirm password" required>
+              <i class="fas fa-lock input-icon"></i>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="terms" required>
+              <label for="terms">I am 18+ and accept the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="promotions">
+              <label for="promotions">I would like to receive promotions and offers</label>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <span class="btn-text">Create Account</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+
+            <div class="divider"><span>OR</span></div>
+
+            <button type="button" class="google-btn">
+              <img class="google-image" src="design\google.png" alt="google"> Sign Up with Google
+            </button>
+
+            <p class="signup-text">Already have an account? <a href="login.html">Login</a></p>
+          </form>
+        </div>
+
+        <div class="benefits-section">
+          <h2>Why Join BetCamp?</h2>
+          <ul class="benefits-list">
+            <li><i class="fas fa-check-circle"></i> Best odds guaranteed on all sports</li>
+            <li><i class="fas fa-check-circle"></i> Live streaming of 100,000+ events yearly</li>
+            <li><i class="fas fa-check-circle"></i> £20 in free bets when you sign up</li>
+            <li><i class="fas fa-check-circle"></i> Fast withdrawals processed within 2 hours</li>
+            <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
+          </ul>
+          
+          <div class="security-badge">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+              <h4>Secure & Encrypted</h4>
+              <p>All your data is protected with 256-bit SSL encryption</p>
+            </div>
+          </div>
+          
+          <div class="payment-methods">
+            <p>We accept:</p>
+            <div class="payment-icons">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-paypal"></i>
+              <i class="fab fa-cc-apple-pay"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Trust indicators -->
+    <div class="trust-indicators">
+      <div class="container">
+        <div class="trust-item">
+          <i class="fas fa-lock"></i>
+          <span>Licensed & Regulated</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>Secure Betting</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-headset"></i>
+          <span>24/7 Support</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Responsible Gaming</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2023 BetCamp. All rights reserved. | <a href="#">Responsible Gaming</a> | <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
+        <p>BetCamp is licensed and regulated by the UK Gambling Commission (License No: 123456). Please gamble responsibly.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="design\script.js"></script>
+</body>
+</html>

@@ -1,539 +1,573 @@
 :root { 
-    --main-color: #143d2a; 
-    --accent-color: #1e5236;
-    --highlight: #2ecc71;
-    --secondary-color: #0e1b12;
-    --panel-color: #1b2d22;
-    --text-color: #fff;
-    --text-size: 16px;
+  --main-color: #143d2a; 
+  --accent-color: #1e5236;
+  --highlight: #2ecc71;
+  --secondary-color: #0e1b12;
+  --panel-color: #1b2d22;
+  --text-color: #fff;
+  --text-size: 16px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-    width: 100%;
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+width: 100%;
+min-height: 100%;
+height: auto;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--secondary-color);
+color: var(--text-color);
 }
 
-/* Header */
+/* ================= HEADER ================= */
 .dashboard-sec {
-    width: 100%;
-    background-color: var(--main-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  width: 100%;             /* full width always */
+  max-width: none;         /* remove restriction */
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .logo-name {
-    font-size: 22px;
-    font-weight: bold;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .nav-links {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;         /* ✅ allows wrapping on smaller screens */
+  gap: 20px;
+  justify-content: center; /* ✅ keeps spacing balanced */
 }
 
 .nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: var(--text-size);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--text-size);
 }
 
 .nav-links a:hover {
-    color: var(--highlight);
+  color: var(--highlight);
 }
 
 .auth-buttons button {
-    margin-left: 10px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .login-btn {
-    background: transparent;
-    color: var(--text-color);
-    border: 1px solid var(--highlight);
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--highlight);
 }
 
 .signup-btn {
-    background: var(--highlight);
-    color: black;
+  background: var(--highlight);
+  color: black;
 }
 .signup-btn a {
-    background: var(--highlight);
-    color: black;
+  background: var(--highlight);
+  color: black;
 }
 
-/* Main Layout */
+/* ================= MAIN LAYOUT ================= */
 .main-content-sec {
-    display: grid;
-    grid-template-columns: 200px 1fr 280px; 
-    gap: 5px;
-    height: calc(100vh - 70px);
+display: grid;
+grid-template-columns: 15% 1fr 20%;
+gap: 10px;
+min-height: calc(100vh - 70px);
+width: 100%;
+max-width: 1600px;
+margin: 0 auto;
 }
 
 /* Sidebar */
 .option-sec {
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .option-sec a {
-    padding: 8px;
-    text-decoration: none;
-    color: var(--text-color);
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    font-size: 10px;
+  padding: 8px;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 10px;
 }
 
 .option-sec a:hover {
-    background: var(--highlight);
-    color: black;
+  background: var(--highlight);
+  color: black;
 }
 
 .infor-sec {
-    background: var(--panel-color);
-    padding: 10px;
-    width: 100%;
+  background: var(--panel-color);
+  padding: 10px;
+  width: 100%;
 }
 
 .hero-image {
-    width: 100%;
-    height: 280px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+/* Promo Banner */
 .promo-banner {
-    text-align: center;
+  text-align: center;
 }
 
 .promo-banner h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .promo-banner p {
-    font-size: 18px;
-    margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .register-btn {
-    padding: 12px 24px;
-    border: none;
-    background: var(--highlight);
-    color: black;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
+  padding: 12px 24px;
+  border: none;
+  background: var(--highlight);
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-/* Right Sidebar (Bet Slip) */
+/* ================= BET SLIP (RIGHT SIDEBAR) ================= */
 .option-sec2 {
-    background: var(--panel-color);
-    border-radius: 8px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    font-size: 14px;
-  }
-  
-  .bet-card {
-    background: var(--accent-color);
-    padding: 12px;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .bet-card .match {
-    font-weight: bold;
-    margin-bottom: 6px;
-  }
-  
-  .bet-option {
-    display: flex;
-    justify-content: space-between;
-    background: var(--main-color);
-    padding: 6px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .bet-option:hover {
-    background: var(--highlight);
-    color: black;
-  }
-  
-  .bet-option .odds {
-    font-weight: bold;
-  }
-  
-  .total-odds {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  
-  .place-bet {
-    width: 100%;
-    padding: 12px;
-    background: var(--highlight);
-    border: none;
-    color: black;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
+  background: var(--panel-color);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.bet-card {
+  background: var(--accent-color);
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bet-card .match {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.bet-option {
+  display: flex;
+  justify-content: space-between;
+  background: var(--main-color);
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bet-option:hover {
+  background: var(--highlight);
+  color: black;
+}
+
+.bet-option .odds {
+  font-weight: bold;
+}
+
+.total-odds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+}
 
 .place-bet {
-    margin-top: 20px;
-    width: 100%;
-    padding: 12px;
-    background: var(--highlight);
-    border: none;
-    color: black;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: var(--highlight);
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-/* Squares Container */
+/* ================= GRID (SQUARES) ================= */
 .container1 {
-    width: 100%;               
-    max-width: 800px;            
-    margin: 0 auto;              
-    
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); 
-    gap: 8px;
+  width: 100%;               
+  max-width: 800px;            
+  margin: 0 auto;              
+  
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); 
+  gap: 8px;
 
-    background-color: var(--main-color);
-    padding: 10px;
-    border-radius: 6px;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 6px;
 }
 
 .container1 a {
-    position: relative;      
-    width: 100%;
-    aspect-ratio: 1 / 1;
+  position: relative;      
+  width: 100%;
+  aspect-ratio: 1 / 1;
 
-    background: var(--accent-color);
-    color: var(--text-color);
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.3s;
-    overflow: hidden;
-    font-size: 14px;
+  background: var(--accent-color);
+  color: var(--text-color);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+  overflow: hidden;
+  font-size: 14px;
 
-    display: flex;
-    align-items: center;      
-    justify-content: center; 
+  display: flex;
+  align-items: center;      
+  justify-content: center; 
 }
 
 /* Center text perfectly inside squares */
 .container1 a span {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container1 a:hover {
-    background: var(--highlight);
-    color: black;
+  background: var(--highlight);
+  color: black;
 }
 
 .possible-wins {
-    margin-top: 10px;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
 }
-.Betslip-container{
-    width: 40px;    
-    display: flex;
-    height: max-content;                            
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); 
-    gap: 8px;
-  ;
 
-    background-color: var(--main-color);
+/* ================= AUTH / LOGIN PAGES ================= */
+.Betslip-container{
+  width: 40px;    
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); 
+  gap: 8px;
+  height: max-content;
+  background-color: var(--main-color);
 }
 
 .Signup-container{
-    width: 700px;
-    height: 650px;                         
-    margin: 0 auto;   
-    margin-top: 20px;           
-    
-    background-color: var(--main-color);
+  width: 700px;
+  height: 650px;                         
+  margin: 0 auto;   
+  margin-top: 20px;           
+  background-color: var(--main-color);
 }
 
 .header-part{
-    width: 100%;
-    height: 60px;
-    background-color: var(--highlight);
-
-
-
+  width: 100%;
+  height: 60px;
+  background-color: var(--highlight);
 }
+
 .credential-login{
-    width: 100%;
-    height: 590px;
-    background-color: #fff;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px;
-
-    
+  width: 100%;
+  height: 590px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 .box1{
-
-    height: 500px;
-    width: 650px;
-    background-color: rgb(230, 225, 218);
-
-    display: flex;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 500px;
+  width: 650px;
+  background-color: rgb(230, 225, 218);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .button-login button {
-    padding: 5px 12px;
-    border: none;
-    background-color: var(--highlight);
-    color: white;
-    cursor: pointer;
+  padding: 5px 12px;
+  border: none;
+  background-color: var(--highlight);
+  color: white;
+  cursor: pointer;
 }
 
 .PlaceBetContainer{
-    height: 40px;
-    border-radius: 5px;
-    align-items: center;
-    background-color: rgb(116, 49, 25);
-
-    display: flex;
-    text-align: center;
-    justify-content: center;
+  height: 40px;
+  border-radius: 5px;
+  align-items: center;
+  background-color: rgb(116, 49, 25);
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
+
 .authenticationBox{
-
-    height: 300px;
-    width: 100%;
-    background-color: var(--main-color);
+  height: 300px;
+  width: 100%;
+  background-color: var(--main-color);
 }
-
 
 .Submit{
-    width: 40px;
-    height: 50px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  width: 40px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Responsive */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 1000px) {
-  .main-content-sec {
+.main-content-sec {
+  display: flex;
+  flex-direction: column;
+}
+
+.infor-sec {
+  order: 2;
+}
+
+.option-sec {
+  order: 1;
+}
+
+.Betslip-container {
+  order: 3;
+}
+
+/* Nav bar stack for mobile */
+.dashboard-sec {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 15px;
+}
+
+.nav-links {
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+}
+
+/* ================= LOGIN PAGE ================= */
+.wholePage {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  padding: 40px;
+  width: 500px;
+  text-align: center;
+}
+
+.login-card h1 {
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+.login-card h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: normal;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #333;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn-submit {
+  width: 100%;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: #009933;
+}
+
+.remember-me {
+  text-align: left;
+  margin: 5px 0 15px 0;
+  font-size: 13px;
+  color: #444;
+}
+
+.forgot {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.forgot a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+.divider:not(:empty)::before {
+  margin-right: .75em;
+}
+.divider:not(:empty)::after {
+  margin-left: .75em;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.google-btn:hover {
+  background: #251494;
+  color: #fff;
+}
+
+.google-image {
+  width: 18px;
+  height: 18px;
+}
+
+.signup-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #009933;
+}
+.signup-text a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.signup-text a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 1080px) {
+  .dashboard-sec {
+    width: 100%;
+    flex-direction: row;       /* ✅ keep row layout */
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;        /* slightly smaller padding */
+  }
+
+  .nav-links {
+    flex-direction: row;       /* ✅ force horizontal links */
+    gap: 6px;
+    flex-wrap: wrap;           /* ✅ wrap if too many items */
+    justify-content: center;
+  }
+
+  .auth-buttons {
     display: flex;
     flex-direction: row;
+    gap: 3px;
   }
 
-  .infor-sec {
-    order: 2; /* Hero image + squares first */
+  .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 8px;
+  }
+  .logo-name {
+    font-size: 12px;
+    font-weight: bold;
   }
 
-  .option-sec {
-    order: 1; /* Sidebar second */
+  .signup-btn {
+    background: var(--highlight);
+    color: black;
+    width: auto;           /* auto width instead of fit-content */
+    padding: 2px;      /* smaller padding */
+    font-size: 8px;       /* smaller text */
+    border-radius: 4px;    /* optional: keeps it neat */
   }
 
-  .Betslip-container {
-    order: 3; /* Bet slip last */
-
+  .signup-btn a {
+    color: black;
+    font-size: 10px;       /* ensure text inside is smaller too */
+    text-decoration: none;
   }
 }
-
-
-
-/* design for the login  page */
-
-.wholePage {
-    background-color: var(--main-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .login-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    padding: 40px;
-    width: 500px;
-    text-align: center;
-  }
-  
-  .login-card h1 {
-    margin-bottom: 10px;
-    color: var(--main-color);
-  }
-  
-  .login-card h3 {
-    margin-bottom: 20px;
-    color: #333;
-    font-weight: normal;
-  }
-  
-  label {
-    display: block;
-    text-align: left;
-    margin-top: 10px;
-    font-size: 13px;
-    color: #333;
-  }
-  
-  .input-box {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-  }
-  
-  .btn-submit {
-    width: 100%;
-    background: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .btn-submit:hover {
-    background: #009933;
-  }
-  
-  .remember-me {
-    text-align: left;
-    margin: 5px 0 15px 0;
-    font-size: 13px;
-    color: #444;
-  }
-  
-  .forgot {
-    margin-top: 10px;
-    font-size: 13px;
-  }
-  
-  .forgot a {
-    color: var(--main-color);
-    text-decoration: none;
-  }
-  .forgot a:hover {
-    text-decoration: underline;
-  }
-  
-  .divider {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin: 20px 0;
-  }
-  .divider::before, .divider::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid #ccc;
-  }
-  .divider:not(:empty)::before {
-    margin-right: .75em;
-  }
-  .divider:not(:empty)::after {
-    margin-left: .75em;
-  }
-  
-  .google-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: white;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
-  }
-  .google-btn:hover {
-    background: #251494;
-    color: #fff;
-  }
-
-  
-  .google-image {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .signup-text {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #009933;
-  }
-  .signup-text a {
-    color: var(--main-color);
-    text-decoration: none;
-  }
-  .signup-text a:hover {
-    text-decoration: underline;
-  }

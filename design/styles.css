@@ -563,9 +563,9 @@ label {
     background: var(--highlight);
     color: black;
     width: auto;           /* auto width instead of fit-content */
-    padding: 2px;      /* smaller padding */
+    padding: 1px;      /* smaller padding */
     font-size: 8px;       /* smaller text */
-    border-radius: 4px;    /* optional: keeps it neat */
+    border-radius: 4px;  
   }
 
   .signup-btn a {
@@ -594,7 +594,11 @@ label {
   }
 
   .infor-sec {
-    width: 100%;        /* ✅ fills remaining space */
+    width: 100%;  
+    background: var(--panel-color);
+    padding: 5px;
+  
+        /* ✅ fills remaining space */
   }
 
   .hero-image {
@@ -604,4 +608,40 @@ label {
     overflow: hidden;
     margin-bottom: 8px;
   }
+  .container1 {
+    width: 100%;               
+    max-width: 800px;            
+    margin: 0 auto;              
+    
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 8px;
+  
+    background-color: var(--main-color);
+    padding: 5px;
+    border-radius: 6px;
+  }
+  .container1 a{
+    font-size: 10px;
+  }
 }
+.bet-section {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: var(--panel-color);
+  border-radius: 8px;
+}
+
+.bet-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--highlight);
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 6px;
+}
+
+
+
+
+
+ 
